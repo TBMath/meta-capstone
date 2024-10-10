@@ -1,17 +1,18 @@
-import Header from './components/Header';
-import Nav from './components/Nav';
-import Footer from './components/Footer';
-import Main from './components/Main';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import BookingPage from './pages/BookingPage';
+import HomePage from './pages/HomePage';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <>
-    <Header/>
-    <Nav/>
-    <Main/>
-    <Footer/>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/booking" element={<BookingPage />} />
+        <Route path="*" element={<h1>404 Not Found</h1>} />
+      </Routes>
+    </Router>
   );
 }
 
