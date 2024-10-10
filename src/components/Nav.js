@@ -2,13 +2,14 @@ import Logo from '../images/logo.jpg'
 function Nav(){
  return(
     <>
-    <div className='flex  justify-between'>
-    <div className='flex justify-start pl-10'>
-    <img src={Logo} alt='logo' width="250" height="150"/>
-    </div>
-   
-    <ul className="list-none text-black flex flex-row justify-center space-x-20 p-5 bg-white ">
-        <li className=' '>
+    
+    
+  
+    
+    <nav className='flex items-center justify-between p-4'>
+    <div className='flex items-center'><img src={Logo} alt='logo' className='h-10 w-30 mr-2'/></div>
+    <ul className="flex space-x-8 pr-20">
+        <li className=''>
             Home
         </li>
         <li>Specials</li> 
@@ -20,8 +21,7 @@ function Nav(){
         </li>
         <li>Bookings</li>
     </ul>
-    <div className=' justify-end pt-3 pr-10 '><button className='bg-sky-500 p-2 rounded-full text-white hover:bg-green-600'>Book Now!  </button></div>
-    </div>
+    <div className=''><button className='bg-blue-500 text-white text-lg font-medium px-4 py-2 rounded-full hover:bg-green-500 transition-colors duration-300'>Hi</button></div></nav>
     </>
  )
 }
