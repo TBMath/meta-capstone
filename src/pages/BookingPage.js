@@ -1,9 +1,10 @@
 import Footer from "../components/Footer"
-import { useEffect, useReducer,useState } from "react"
+import {  useReducer,useState } from "react"
 import fetchAPI from "../api/fetchAPI"
 
 import Nav from "../components/Nav"
 import BookingForm from "../components/BookingForm"
+
 function BookingPage(){
     
     
@@ -21,12 +22,17 @@ function BookingPage(){
     }
     var initializeTimes = {times:fetchAPI(currentDate)}
     var [state, dispatch] = useReducer(updateTimes,initializeTimes)
-    
+    var [guests,setGuests] = useState(undefined)
+    var [name,setName] = useState("")
+    var [time,setTime] = useState(undefined)
+    var [o,setO] = useState("")
+  
 
+   
     return(
         <>
         <Nav/> 
-        <BookingForm dispatch={dispatch} state={state} date={date} setDate={setDate}/>
+        <BookingForm dispatch={dispatch} state={state} date={date} setDate={setDate} guests={guests} setGuests={setGuests} name={name} setName={setName} time={time} setTime={setTime} o={o} setO={setO} />
         <Footer/>
         </>
     )

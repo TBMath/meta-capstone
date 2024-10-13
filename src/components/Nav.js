@@ -1,4 +1,5 @@
 import Logo from '../images/logo.jpg'
+
 function Nav(){
  return(
     <>
@@ -9,15 +10,15 @@ function Nav(){
     <nav className='flex items-center justify-between p-4'>
     <div className='flex items-center'><img src={Logo} alt='logo' className='h-10 w-30 mr-2'/></div>
     <ul className="flex space-x-8 pr-18">
-        <li className=''>
-            Home
+        <li className='hover:font-bold hover:underline text-black no-underline'>
+            <a href="/" className='hover:font-bold hover:underline text-black no-underline '>Home</a>
         </li>
-        <li>Specials</li> 
+        <li><a href="/#specials" className='hover:font-bold hover:underline text-black no-underline'>Specials</a></li> 
         <li>
-            About Us
+        <a href="/#about-us" className='hover:font-bold hover:underline text-black no-underline'>About Us</a>
         </li>
         <li>
-            Ratings
+        <a href="/#ratings" className='hover:font-bold hover:underline text-black no-underline'>Ratings</a>
         </li>
     
     </ul>

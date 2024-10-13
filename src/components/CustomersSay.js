@@ -1,26 +1,49 @@
-import { Card,Row,Col} from "react-bootstrap"
-function CustomersSay(){
-    return(
-        <div className="flex justify-center bg-orange-400">
-        <h1 className="  flex justify-center">Our Ratings</h1>
+import { Card, Row, Col } from "react-bootstrap";
+
+function CustomersSay() {
+  const cardData = [
+    {
+      title: "John Doe",
+      text: "Amazing food and great service! Will definitely come again.",
+      text2:"⭐⭐⭐⭐⭐"
+    },
+    {
+      title: "Jane Smith",
+      text: "The ambiance was perfect, and the pancaked was the best I've ever had.",
+      text2:"⭐⭐⭐⭐⭐"
+    },
+    {
+      title: "Alex Johnson",
+      text: "A fantastic dining experience with a great selection of flavors.",
+      text2:"⭐⭐⭐⭐⭐"
+    },
+    {
+      title: "Emily Davis",
+      text: "Top-notch service and delicious food. Highly recommended!",
+      text2:"⭐⭐⭐⭐⭐"
+    },
+  ];
+
+  return (
+    <div className="justify-center bg-orange-400 mb-0" id="ratings">
+      <h1 className="p-2 flex justify-center">Our Ratings</h1>
+      <div className="flex justify-center p-4">
         <Row xs={1} md={2} className="g-4">
-      {Array.from({ length: 4 }).map((_, idx) => (
-        <Col key={idx}>
-          <Card>
-            <Card.Img variant="top" src="holder.js/100px160" />
-            <Card.Body>
-              <Card.Title>Card title</Card.Title>
-              <Card.Text>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-      ))}
-    </Row>
-        </div>
-    )
+          {cardData.map((card, idx) => (
+            <Col key={idx}>
+              <Card>
+                <Card.Body>
+                  <Card.Title>{card.title}</Card.Title>
+                  <Card.Text>{card.text}</Card.Text>
+                  <Card.Text>{card.text2}</Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </div>
+    </div>
+  );
 }
-export default CustomersSay
+
+export default CustomersSay;

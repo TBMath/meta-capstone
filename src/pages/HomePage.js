@@ -6,14 +6,14 @@ import Footer from "../components/Footer"
 import CustomersSay from "../components/CustomersSay"
 function HomePage(){
     return(
-        <>
-        <Nav/>
+        <div className="mr-0">
+        <Nav />
         <CallToAction/>
         <Specials/>
         <Chicago/>
         <CustomersSay/> 
         <Footer/>
-        </>
+        </div>
        
     )
 }

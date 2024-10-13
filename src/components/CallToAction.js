@@ -6,7 +6,7 @@ function CallToAction(){
         <h1 className="text-2xl font-sans font-bold">
             Come try our delicious means!
         </h1>
-        <p> Full of savory delight</p></div>
+        <p className='pr-20'> "Experience the zesty flavors of the Mediterranean at Little Lemon—where every bite bursts with vibrant, lemon-kissed goodness! Come savor our fresh, hand-crafted dishes that bring the sunshine of the Mediterranean straight to Chicago."</p></div>
       <div>
       <img src={Pasta} alt="Pasta" width="500" height="600" className='rounded-lg'/>
       </div>
